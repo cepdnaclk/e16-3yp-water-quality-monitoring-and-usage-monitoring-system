@@ -1,6 +1,6 @@
-# co227
-
-A new Flutter project.
+# Water Care 
+Mobile application for customer with limited access.
+Email and password validators are in place to avoid unneccassary requests to the server
 
 ## Getting Started
 

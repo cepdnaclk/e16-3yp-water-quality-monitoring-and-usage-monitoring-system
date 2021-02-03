@@ -1,6 +1,10 @@
 # Water Care 
 Mobile application for customer with limited access.
-Email and password validators are in place to avoid unneccassary requests to the server
+Email and password validators are in place to avoid unneccassary requests to the server.
+### used libraries:
+ -flutter/material.dart
+ -http/http.dart
+ -sharedPreferences.dart
 
 ## Getting Started
 

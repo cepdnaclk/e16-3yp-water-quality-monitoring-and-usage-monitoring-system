@@ -930,7 +930,7 @@
    Water Usage will be recorded using this module. Readings will be taken by external inturrupts in microcontroller chip. 
 </p>
 
-br>
+
  <div class="row">
                 <div class="col-xs-12 col-md-4">
                     <img src="./assets/images/designs/fabrication/water_usage/1.PNG" alt="" class="img-responsive">
@@ -970,8 +970,75 @@ br>
  <br>
  <br>
 <div class="col-xs-12 col-md-12 section-container-spacer">
-            <h2 class="text-center">Embeded Systems Testing</h2>
-        </div>
+            <h2 class="text-center">Plan For The Embeded Systems Testing</h2>
+       
 
 
 </div>
+ <p>There are two parts of our embedded system testing plan.Those parts are showed below.
+ </p>
+ 
+        <ul>
+                <li>Hardware Testing</li>
+                <li>Node Software Testing</li>
+                
+
+              </ul> 
+  <p>
+  	Aim is to ensure the reliability of our product by doing these tests.
+  </p>
+  <h3>Hardware Testing</h3>
+                
+                
+
+            
+  <p>
+     In this we do tests when soldering and to test the functionality of the sensor devices.
+  </p>
+  <p>
+  	When soldering we do below steps,
+  </p>
+
+  <ol>
+                <li>Soldering and testing the power sections one by one</li>
+                <li>Solder the relavant wires from the sensors with microcontroller and test the basic functionality</li>
+                <li>check the connectivity</li>
+                
+
+              </ol> 
+<p>
+	To check the connectivity we use oscilloscope or logic analyzers.
+</p>
+<p>
+	To do the sensor testings for turbidity sensor and TDS count sensor we use glasses with water which desolved with different kind of substances as below.
+</p>
+<div class="col-xs-12 col-md-4">
+                    <img src="./assets/images/Tests/ESTest/WATER-FEATURE.jpg" alt="" class="img-responsive">
+
+
+                   
+                      </div>   
+<p>
+	By dipping the sensors inside the water glasses we test the functionality of the sensors and how the readings change according to the difference of water. By those readings we can calibrate the sensor readings accordingly. And also we can detect if the sensors are deffected by checking the sensor readings.
+	To test Ultrasonic sensor we can use above glasses with different water levels and do the same tests.
+</p>  
+
+<br><br><br><br><br><br>
+
+<h3>Node Software Testing</h3>
+
+<p>
+	In this testing we do test to check variable overflows, compiler optimizations and typing mistakes.
+	We use below techniques to do the debugging.  
+</p>
+
+ <ul>
+                <li>Debug breakpoints</li>
+                <li>Disassembly window</li>
+                <li>Call stack window</li>
+                
+
+              </ul> 
+ <p>
+ 	And also we are planning to check the real time sensor readings are showing on our web site and the app. By this we can make sure that the interaction between node software and backend works correctly.
+ </p>

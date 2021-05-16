@@ -1,0 +1,24 @@
+2021/05/16 00:00:15 [notice] 8384#4452: signal process started
+2021/05/16 00:01:21 [notice] 13628#2184: signal process started
+2021/05/16 00:07:31 [notice] 12124#8392: signal process started
+2021/05/16 00:07:31 [error] 12124#8392: CreateFile() "C:\nginx/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2021/05/16 00:07:59 [notice] 10812#11984: signal process started
+2021/05/16 00:07:59 [error] 10812#11984: CreateFile() "C:\nginx/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2021/05/16 14:36:10 [notice] 1404#9776: signal process started
+2021/05/16 14:36:10 [error] 1404#9776: CreateFile() "C:\nginx/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2021/05/16 14:36:30 [notice] 1904#9344: signal process started
+2021/05/16 14:36:33 [notice] 10448#11268: signal process started
+2021/05/16 14:38:09 [error] 2556#3736: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:3002/", host: "localhost"
+2021/05/16 14:39:19 [error] 2556#3736: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:3001/", host: "localhost"
+2021/05/16 14:39:21 [error] 2556#3736: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:3000/", host: "localhost"
+2021/05/16 14:39:23 [error] 2556#3736: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:3002/", host: "localhost"
+2021/05/16 14:39:25 [error] 2556#3736: *1 no live upstreams while connecting to upstream, client: 127.0.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://allbackend/", host: "localhost"
+2021/05/16 14:42:00 [error] 2556#3736: *15 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:3002/", host: "localhost"
+2021/05/16 14:42:41 [error] 2556#3736: *15 WSARecv() failed (10054: An existing connection was forcibly closed by the remote host) while reading response header from upstream, client: 127.0.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:3001/", host: "localhost"
+2021/05/16 14:42:43 [error] 2556#3736: *15 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:3000/", host: "localhost"
+2021/05/16 14:44:16 [notice] 12080#12216: signal process started
+2021/05/16 14:44:43 [error] 1708#11240: *19 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /styles.css HTTP/1.1", upstream: "http://127.0.0.1:3002/styles.css", host: "localhost", referrer: "http://localhost/login"
+2021/05/16 15:18:01 [notice] 9136#5564: signal process started
+2021/05/16 15:18:15 [error] 2412#5216: *40 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /image.jpg HTTP/1.1", upstream: "http://127.0.0.1:3002/image.jpg", host: "localhost", referrer: "http://localhost/styles.css"
+2021/05/16 15:18:48 [error] 2412#5216: *44 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /tank.png HTTP/1.1", upstream: "http://127.0.0.1:3002/tank.png", host: "localhost", referrer: "http://localhost/adminView"
+2021/05/16 15:19:35 [notice] 1348#9388: signal process started

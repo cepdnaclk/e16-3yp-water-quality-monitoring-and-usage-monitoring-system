@@ -874,6 +874,42 @@
 
         <br>
         
+<div class="col-xs-12 col-md-12 section-container-spacer">
+            <h2 class="text-center">Embeded Software Explanation</h2>
+        </div>
+<p>
+    This device utilizes the services of Arduino UNO R3 board which has ATMEGA328P U chip and NodeMcu ESP-12E board for WiFi connection.
+    Let's consider the working procedure of the device step by step.
+</p>
+<h3>Device Initialization</h3>
+<p>
+    <ol>
+   <li> When the device is powered up, NodeMcu will creates a WiFi server on port 80 under the url of www.aquawatcher.com using "DNS" and "WebServer" modules. We can connect to that network and set up user details and tank details. Then we can enter our WiFi network details as well. Those details will be stored in EEPROM memory of the device until they are updated. Therefore user won't have to set those values again on reboot.</li>
+    
+   <li> We can reset the above details by pressing reset button and going through the same procedure as before.</li>
+    
+   <li> Thereafter, server will be closed down and normal procedure of the device will occur.</li>
+   
+</p>
+<h3>Working Procedure</h3>
+<br>
+        <ol>
+            <li>Water Level will be measured using Ultra Sonic sensor using an analog input pin. This will be used to get tank size as well.</li>
+            <li>Water Quality will be measured using TDS and Turbidity Sensors using an analog input pins.<li>
+            <li>Water Usage will be measured using a Flow Meter using external inturrupts. </li>
+            <li>All the above modules will use their own custom libraries.</li>
+            <li>Readings will be taken periodically.</li>
+            <li>When the water is contacted with the sensors, device will identify water is filling.</li>
+            <li>Then the device will start sending new data to the server.</li>
+            <li>When an issue occurs regarding water level or quality, an alarm will be set off using Tone function.</li>
+            <li>Water quality standards are preseted values.</li>
+            <li>Communication between 2 boards will be done using serial communication. Extra pins in NodeMcu board was set as serial pins using Softwareserial library.</li>
+            <li>Solar panels are intergrated as power source.</li>
+
+
+        </ol>
+
+
     
  <div class="col-xs-12 col-md-12 section-container-spacer">
             <h2 class="text-center">Designs made for fabrication</h2>
@@ -1025,11 +1061,9 @@
   <p>
   	Aim is to ensure the reliability of our product by doing these tests.
   </p>
-  <h3>Hardware Testing</h3>
-                
-                
 
-            
+  <h3>Hardware Testing</h3>
+                            
   <p>
      In this we do tests when soldering and to test the functionality of the sensor devices.
   </p>
@@ -1080,3 +1114,157 @@
  <p>
  	And also we are planning to check the real time sensor readings are showing on our web site and the app. By this we can make sure that the interaction between node software and backend works correctly.
  </p>
+
+
+
+<div class="col-xs-12 col-md-12 section-container-spacer">
+            <h2 class="text-center">Device Installation</h2>
+</div>
+
+<ul>
+                <li>Water Level Monitor</li>
+                <li>Water Quality Monitor</li>
+</ul> 
+
+<h3>Water Level Monitor</h3>
+                            
+  <p>
+    <ol>
+                <li>1st empty the tank</li>
+                <li>Then Install the "Water Level Monitor" inside of the closing lid of the tank. Make sure it is levelled</li>
+</ol> 
+
+<div class="col-xs-12 col-md-4">
+                    <img src="./assets/images/installation/1.jpg" alt="" class="img-responsive">                  
+</div>  
+    <br><br><br><br><br><br>
+  </p>
+
+
+  <h3>Water Quality Monitor</h3>
+                            
+  <p>
+    <ol>
+                <li>1st remove the inlet of the tank.</li>
+                <li>Then Install the "Water Quality Monitor" to the inlet and then insert inlet pipe to the back of the device.</li>
+                <li>Make sure to expose the device to direct sun light if you choose to use our solar panel intergrated version..</li>
+</ol>
+
+<div class="col-xs-12 col-md-4">
+                    <img src="./assets/images/installation/3.png" alt="" class="img-responsive">                  
+</div>   
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<div class="col-xs-12 col-md-12 section-container-spacer">
+            <h2 class="text-center">Getting Started</h2>
+</div>
+ <p>There are two parts of setting up the device.
+ </p>
+ 
+        <ul>
+                <li>Device Initialization</li>
+                <li>Connect to WiFi network</li>
+                
+
+              </ul> 
+  
+  <h3>Device Initialization</h3>
+                            
+  <p>
+     1st we need to store user email and tank number in the device. 1st connect the device to the power, then connect with "AquaWatcher device Setup!" wifi network. Then go to the address www.aquawatcher.com and provide information.
+     <br>
+     It will be convinient to you if you installed our "AquaWatcher" app on your android/iOS device as well.
+  </p>
+
+
+<br>
+<div class="col-xs-12 col-md-4">
+                    <img src="./assets/images/setup/1.png" alt="" class="img-responsive">                  
+</div>  
+
+<div class="col-xs-12 col-md-4">                  
+        <img src="./assets/images/setup/2.png" alt="" class="img-responsive">             
+</div>  
+
+
+  
+
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+<br><br><br><br><br><br>
+
+<h3>Node Software Testing</h3>
+
+  <p>
+Then wifi network "Aqua Watcher" will be available and connect to it. Then go to manage wifi network and enter your wifi network information.
+
+ </p>
+ <br>
+
+ <div class="col-xs-12 col-md-4">                  
+        <img src="./assets/images/setup/3.png" alt="" class="img-responsive">             
+</div>  
+
+<div class="col-xs-12 col-md-4">                  
+        <img src="./assets/images/setup/4.png" alt="" class="img-responsive">             
+</div>  
+
+<div class="col-xs-12 col-md-4">                  
+        <img src="./assets/images/setup/5.png" alt="" class="img-responsive">             
+</div>  
+
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+<div class="col-xs-12 col-md-12 section-container-spacer">
+            <h2 class="text-center">Start Operation</h2>
+</div>
+<p>
+<ul>
+    <li>You can now start to fill the tank.</li>
+    <li>You don't have to keep monitor the device. It will send notifications when,
+            <ol>
+                <li>Tank is almost full</li>
+                <li>Water pollution is detected</li>
+                <li>Tank is nearly empty.</li>
+                <li>Water cuts and relevant details regarding to water suplyer.</li>
+            </ol>
+        </li>
+    <li>You can monitor your devices via our website www.aquawatcher.ml as well.</li>
+    <li>Our services will include direct interactions with National Water Supply and Drainage Board for your convinience as well.</li>
+    
+</ul>
+ </p>
+
+ <div class="col-xs-12 col-md-12 section-container-spacer">
+            <h2 class="text-center">Future Plans</h2>
+</div>
+
+<ol>            
+                <li>Water leakage detection functionalities.</li>
+                <li>Extend the compatibility to other chemical types to install with chemical tanks.</li>
+                <li>Set automatic valves.</li>                
+            </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

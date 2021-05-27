@@ -9,6 +9,7 @@ import 'package:http/http.dart';
 import 'dart:convert';
 import 'tank_view.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/local_notifications.dart'
 
 // ignore: must_be_immutable
 class Home extends StatefulWidget{
@@ -100,7 +101,7 @@ class HomeState extends State<Home> with WidgetsBindingObserver{
   Widget build(BuildContext context) {
     return Scaffold(
       
-      appBar: AppBar(title: Text("Hello! Thushara",textAlign: TextAlign.center,),),
+      appBar: AppBar(title: Text("Hello! " + ${UserName},textAlign: TextAlign.center,),),
       backgroundColor: Colors.lightBlue[300],
       drawer: null,
       body: statusImage(ok)

@@ -10,6 +10,10 @@ import 'dart:convert';
 import 'tank_view.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/local_notifications.dart'
+  
+/*
+Check readme files about the imported libraries.
+*/
 
 // ignore: must_be_immutable
 class Home extends StatefulWidget{

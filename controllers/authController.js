@@ -223,22 +223,35 @@ module.exports.removeAdmin_delete = (req, res)  => {
 
 }
 
+
+
+
+
 module.exports.readings_put = (req, res) => {
   const tank =  JSON.parse(req.params.id); 
+  console.log(tank);
   const filter = {email: tank.email, no: tank.no};
-  Tank.updateOne(filter, req.body , { runValidators: true }, function(err,
+  console.log((req.body) );
+  Tank.updateOne(filter, req.body , function(err,
     result)
     {
       if (err) 
         {
+          console.log(err);
           res.send({'response' : 400});
         } 
       else 
         { 
+           console.log("result");
           res.send({'response' : 200});
         }
     });
 }
+
+
+
+
+
 
 module.exports.user_put = (req, res) => {
   
@@ -631,7 +644,7 @@ transporter.sendMail(mailOptions, function(error, info)
       }
     }); 
 
-      res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000, secure: true });
+      res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000});
       res.status(201).json({ user: user });
     }
     catch(err) 
@@ -665,7 +678,7 @@ module.exports.login_post = async (req, res) => {
     const user = await User.login(email, password);
     console.log(user);
     const token = createToken(user._id);
-    res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000, secure: true });
+    res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000});
     res.status(200).json({ user: user });
    } 
   catch (err) 
@@ -740,9 +753,17 @@ if(req.params.id)
                     {
                       res.redirect('/userReg');
                     }
+                   else if(user.role.toString() == "admin") 
+                    {
+                      res.redirect('/adminView');
+                    }
+                   else if(user.role.toString() == "super") 
+                    {
+                      res.redirect('/superView');
+                    } 
                     else
                     {
-                      res.redirect('/');
+                      res.redirect('/restricted');
                     }
                   
                 }
